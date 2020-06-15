@@ -34,6 +34,8 @@ sed -i.bak -r 's/(.+ swap .+)/#\1/' /etc/fstab
 setenforce 0
 sed -i 's/enforcing/disabled/g' /etc/selinux/config
 
+#port forwarding 
+iptables -P FORWARD ACCEPT
 
 ***********************************************************************************************************************************************
 
